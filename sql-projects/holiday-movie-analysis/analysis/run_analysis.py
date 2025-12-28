@@ -17,8 +17,7 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 def run_query(sql_filename, output_name=None, preview_rows=5):
     """
     Executes a SQL file against SQLite DB.
-    - Uses executescript for DDL (CREATE/DROP/INSERT)
-    - Uses read_sql_query for SELECT queries
+    Handles both DDL and SELECT/WITH queries correctly.
     """
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
@@ -26,15 +25,17 @@ def run_query(sql_filename, output_name=None, preview_rows=5):
     sql_path = SQL_DIR / sql_filename
     query = sql_path.read_text().strip()
 
-    # Detect DDL / non-SELECT scripts
-    if not query.lower().startswith("select"):
+    first_token = query.lstrip().split()[0].lower()
+
+    # DDL / mutation statements
+    if first_token in {"create", "drop", "insert", "update", "delete"}:
         cursor.executescript(query)
         conn.commit()
         print(f"🛠️ Executed DDL: {sql_filename}")
         conn.close()
         return
 
-    # SELECT queries
+    # Analytical queries (SELECT or WITH)
     df = pd.read_sql_query(query, conn)
 
     if output_name:
