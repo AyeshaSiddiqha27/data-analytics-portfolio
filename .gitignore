@@ -1,0 +1,33 @@
+# ------------------------
+# Secrets & credentials
+# ------------------------
+.kaggle/
+kaggle.json
+
+# ------------------------
+# Local databases
+# ------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# ------------------------
+# Raw datasets (do not commit)
+# ------------------------
+data/raw_*.csv
+sql-projects/**/data/raw_*.csv
+
+# ------------------------
+# Python cache & env
+# ------------------------
+__pycache__/
+*.pyc
+.env
+.venv/
+
+# ------------------------
+# OS / editor noise
+# ------------------------
+.DS_Store
+Thumbs.db
+.vscode/
