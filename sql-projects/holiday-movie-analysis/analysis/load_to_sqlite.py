@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 
 # Connect to SQLite database (creates file if it doesn't exist)
-conn = sqlite3.connect("movies.db")
+conn = sqlite3.connect("data/movies.db")
 
 # Load raw CSV
 df = pd.read_csv("data/raw_movies.csv")
@@ -14,6 +14,7 @@ df = df.rename(columns={
 
 # Select only columns we need for analysis
 df = df[[
+    "id",
     "title",
     "release_date",
     "genres",

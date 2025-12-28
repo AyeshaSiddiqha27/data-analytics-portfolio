@@ -1,0 +1,37 @@
+holiday_period,genres,movie_count,avg_rating,revenue_per_movie
+Holiday,Fantasy,27,6.09,159401775.9
+Holiday,Western,10,7.07,145597964.2
+Holiday,Adventure,42,6.17,144566554.7
+Holiday,Music,19,6.35,112834718
+Holiday,Animation,16,6.03,111833356.9
+Holiday,War,22,6.96,104430136.4
+Holiday,Crime,33,6.68,99047995.7
+Holiday,Family,33,5.87,97952975.85
+Holiday,Action,54,5.98,89537222.85
+Holiday,Comedy,121,5.93,80967922.88
+Holiday,Mystery,16,6.28,77730012.44
+Holiday,Thriller,51,5.88,77103630.55
+Holiday,History,25,6.76,75015015.04
+Holiday,Drama,203,6.62,64697196.71
+Holiday,Romance,77,6.22,56892395.68
+Holiday,Horror,25,5.23,41678198.48
+Holiday,Science Fiction,22,6.09,39484546.55
+Non-Holiday,Animation,218,6.36,234049698
+Non-Holiday,Adventure,748,6.16,212259045.8
+Non-Holiday,Fantasy,397,6.1,195663355.1
+Non-Holiday,Family,480,6.04,166772480.2
+Non-Holiday,Science Fiction,513,6,157301317.2
+Non-Holiday,Action,1100,5.99,143749913.2
+Non-Holiday,Thriller,1223,6.02,81208619.06
+Non-Holiday,War,122,6.67,80499859.93
+Non-Holiday,Mystery,332,6.18,78328441.45
+Non-Holiday,Comedy,1601,5.95,70558025.57
+Non-Holiday,Crime,663,6.25,64513238.05
+Non-Holiday,Romance,817,6.21,60295499.48
+Non-Holiday,History,172,6.71,54981199.74
+Non-Holiday,Drama,2094,6.37,50896586.94
+Non-Holiday,Horror,494,5.65,43639554.05
+Non-Holiday,Music,166,6.36,41087297.81
+Non-Holiday,Western,72,6.05,32447075.96
+Non-Holiday,Documentary,107,6.24,10114744.65
+Non-Holiday,Foreign,32,6.35,387442.22

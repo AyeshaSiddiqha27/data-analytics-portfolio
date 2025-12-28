@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 from pathlib import Path
 
-DB_PATH = "movies.db"
+DB_PATH = "data/movies.db"
 SQL_DIR = Path("analysis/sql")
 OUTPUT_DIR = Path("outputs")
 
@@ -32,4 +32,16 @@ if __name__ == "__main__":
     run_query("01_data_quality.sql")
 
     # Task 2: Holiday classification logic
+    
     run_query("02_holiday_flag.sql")
+
+    # Task 3: Baseline performance comparison
+    run_query("03_baseline_comparison.sql", "03_baseline_comparison.csv")
+
+    # Task 4: Genre-level holiday impact
+    run_query("04_genre_expansion.sql", "04_genre_holiday_analysis.csv")
+
+    run_query("05_genre_efficiency.sql", "05_genre_efficiency.csv")
+
+
+

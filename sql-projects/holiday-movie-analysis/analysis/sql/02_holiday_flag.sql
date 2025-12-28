@@ -16,5 +16,5 @@ SELECT
         THEN 'Holiday'
         ELSE 'Non-Holiday'
     END AS holiday_period
-FROM movies
+FROM movie_genres
 WHERE release_date IS NOT NULL;
