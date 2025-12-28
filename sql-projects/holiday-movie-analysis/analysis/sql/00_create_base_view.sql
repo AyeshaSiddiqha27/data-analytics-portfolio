@@ -1,9 +1,12 @@
+DROP VIEW IF EXISTS base_holiday_movies;
+
+CREATE VIEW base_holiday_movies AS
 SELECT
+    id,
     title,
-    release_date,
     rating,
     revenue,
-    genres,
+    release_date,
     CASE
         WHEN (
             strftime('%m', release_date) = '12'
@@ -16,5 +19,5 @@ SELECT
         THEN 'Holiday'
         ELSE 'Non-Holiday'
     END AS holiday_period
-FROM movie_genres
+FROM movies
 WHERE release_date IS NOT NULL;
